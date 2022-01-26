@@ -6,7 +6,7 @@ gmt begin ex22
 	# Get data from USGS using the curl
 
 SITE="https://earthquake.usgs.gov/fdsnws/event/1/query.csv"
-TIME="starttime=2022-01-01%2000:00:00&endtime=2022-01-20%2000:00:00"
+TIME="starttime=2022-01-01%2000:00:00&endtime=2022-01-25%2000:00:00"
 MAG="minmagnitude=3"
 ORDER="orderby=magnitude"
 URL="${SITE}?${TIME}&${MAG}&${ORDER}"
@@ -60,10 +60,10 @@ curl -s $URL > usgs_quakes_22.txt
 	cat <<- END >> neis.legend
 	G 0.25l
 	P
-		
+
 	END
 
-	
+
 	gmt legend -DJBC+o0/1c+w18c/4.2c -F+p+glightyellow neis.legend
 
 	rm neis.legend usgs_quakes_22.txt
