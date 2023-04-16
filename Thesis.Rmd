@@ -1,0 +1,76 @@
+---
+title: "Thesis"
+author: "Natalie Bladis"
+date: "9/6/2022"
+output: pdf_document
+---
+
+```{r}
+thesis <- read.csv("/Users/ntb3/Downloads/Thesis - Sheet1 (3).csv", header=TRUE)
+thesis_data <- as.matrix(thesis[,2:5])
+```
+
+
+
+```{r}
+install.packages('reshape2')
+library(ggplot2)
+library(data.table)
+library(reshape2)
+```
+
+```{r}
+
+plotdata <- melt(thesis,
+                 id.vars = "Region",
+                 measure.vars = c("Unifom.Full.Catalog","Uniform.Declustered","Factorized.Full.Catalog","Factorized.Declustered"),
+                 variable.name = "Measures",
+                 value.name = "Values")
+#Color=c("#333BFF", "#CC6600", "#9633FF", "#E2FF33")
+
+plotdata$Region <- factor(plotdata$Region, levels=c('ComCat SoCal', 'ComCat Japan', 'ComCat New Zealand', 'ComCat Italy', 'ComCat Reno', 'ComCat Atlantic', 'ComCat Pacific', 'ComCat Alaska', 'World (ISC-GEM)'))
+
+levels(plotdata$Measures) <- list("Clustering: all events" = "Unifom.Full.Catalog", "Clustering: Background" = "Uniform.Declustered", "Coupled space-time clustering: all events" = "Factorized.Full.Catalog", "Coupled space-time clustering: background" = "Factorized.Declustered")
+
+ggplot(plotdata, aes(x=Region, y=Values, fill=Measures)) +
+  geom_bar(stat="identity", width=0.5, position=position_dodge(width=0.6)) +
+  theme_bw() +
+  scale_fill_manual(values=c("#0477BF","#DBC306","#D94D1A","#0DF205"), labels=c("Clustering: all events","Clustering: Background", "Coupled space-time clustering: all events", "Coupled space-time clustering: background")) +
+  theme(axis.text.x = element_text(angle = 45, vjust = 0.5)) +
+  theme(text=element_text(size=14, 
+     family="Arial")) + ylab("Gini coefficient")
+
+```
+
+## Theoretical Plots
+
+```{r}
+curve(exp(x), from=-10, to=20, , xlab="x", ylab="y")
+curve(2*exp(x)+1, from=-10, to=20, , xlab="x", ylab="y")
+```
+
+
+## New Dot Plot
+```{r}
+p <- ggplot(plotdata, aes(x=Measures, y=Values, color = Measures)) + 
+  geom_violin(size=1.5) +
+  scale_color_manual(values=c("#0477BF","#DBC306","#D94D1A","#0DF205"), labels=c("Clustering: all events","Clustering: Background", "Coupled space-time clustering: all events", "Coupled space-time clustering: background")) +
+  scale_fill_manual(values=c("#0477BF","#DBC306","#D94D1A","#0DF205")) +
+  #geom_dotplot(binaxis='y', stackdir='center', dotsize=1) + 
+  geom_point(size=1.5) +
+  ylab("Gini coefficient") + 
+  theme_bw() + 
+  theme(axis.text.x = element_text(angle = 15, vjust = 0.5))+
+  theme(text=element_text(size=18, 
+     family="Arial"))
+p
+
+```
+
+```{r}
+
+q <- ggplot(plotdata, aes(x=Measures, y=Values, color = Measures, fill = Measures)) + 
+  geom_point() + scale_fill_manual(values=c("#0477BF","#DBC306","#D94D1A","#0DF205")) + scale_colour_manual(values=c("#0477BF","#DBC306","#D94D1A","#0DF205")) +
+  geom_dotplot(binaxis='y', stackdir='center', dotsize=1) + ylab("Gini coefficient") + theme_bw() + theme(axis.text.x = element_text(angle = 15, vjust = 0.5)) + ylim(0,1) 
+q
+```

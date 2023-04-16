@@ -1,0 +1,45 @@
+\contentsline {section}{\numberline {1}Introduction}{1}{}%
+\contentsline {subsection}{\numberline {1.1}Subsection 1}{1}{}%
+\contentsline {subsection}{\numberline {1.2}Subsection 2}{1}{}%
+\contentsline {subsection}{\numberline {1.3}Contribution of this thesis and dissemination of results}{1}{}%
+\contentsline {subsection}{\numberline {1.4}Thesis organization}{1}{}%
+\contentsline {section}{\numberline {2}Literature Review}{1}{}%
+\contentsline {subsection}{\numberline {2.1}Earthquake Catalogs}{1}{}%
+\contentsline {subsection}{\numberline {2.2}Statistical Models of Seismicity}{2}{}%
+\contentsline {subsubsection}{\numberline {2.2.1}Point Process Models}{2}{}%
+\contentsline {subsubsection}{\numberline {2.2.2}Cyclicity Models}{3}{}%
+\contentsline {subsubsection}{\numberline {2.2.3}Cluster Models}{5}{}%
+\contentsline {subsubsection}{\numberline {2.2.4}ETAS Model}{6}{}%
+\contentsline {paragraph}{Conditional Intensity}{7}{}%
+\contentsline {paragraph}{Estimation}{8}{}%
+\contentsline {paragraph}{Residual Analysis}{10}{}%
+\contentsline {subsection}{\numberline {2.3}Localization Approach - Progressive Localization}{13}{}%
+\contentsline {subsection}{\numberline {2.4}Earthquake Clustering}{15}{}%
+\contentsline {subsubsection}{\numberline {2.4.1}Classification and Characteristics of Earthquake Clusters}{16}{}%
+\contentsline {subsection}{\numberline {2.5}Applications - Earthquake clusters in southern California }{26}{}%
+\contentsline {subsubsection}{\numberline {2.5.1}Identification and stability}{26}{}%
+\contentsline {subsubsection}{\numberline {2.5.2}Spatial variations of Rock damage production}{35}{}%
+\contentsline {subsubsection}{\numberline {2.5.3}Artifacts of earthquake location errors and short-term incompleteness}{38}{}%
+\contentsline {subsection}{\numberline {2.6}Declustering}{43}{}%
+\contentsline {section}{\numberline {3}Background}{44}{}%
+\contentsline {subsection}{\numberline {3.1}Comparing Measures}{44}{}%
+\contentsline {subsection}{\numberline {3.2}Wasserstein Metric, Monge Problem, Kantorovich problem}{47}{}%
+\contentsline {subsection}{\numberline {3.3}Measure Theory Correlation}{50}{}%
+\contentsline {section}{\numberline {4}Methodology}{54}{}%
+\contentsline {subsubsection}{\numberline {4.0.1}Measures and Level Sets}{54}{}%
+\contentsline {subsubsection}{\numberline {4.0.2}Receiver Operating Characteristic (ROC)}{56}{}%
+\contentsline {subsubsection}{\numberline {4.0.3}Absolute Localization}{57}{}%
+\contentsline {subsubsection}{\numberline {4.0.4}Relative Localization}{58}{}%
+\contentsline {subsubsection}{\numberline {4.0.5}ROC and Random Variables}{59}{}%
+\contentsline {subsubsection}{\numberline {4.0.6}Theoretical ROC for a Random Variable}{60}{}%
+\contentsline {subsubsection}{\numberline {4.0.7}Theoretical ROC for an Exponential Random Variable}{61}{}%
+\contentsline {subsubsection}{\numberline {4.0.8}Theoretical ROC for a Pareto Random Variable}{63}{}%
+\contentsline {subsubsection}{\numberline {4.0.9}Theoretical ROC for a Bivariate Random Variables}{66}{}%
+\contentsline {subsubsection}{\numberline {4.0.10}Theoretical ROC for a Bivariate Exponential Random Variables}{67}{}%
+\contentsline {section}{\numberline {5}Results - Quantifying Space-time Clustering on a Given Fault Network }{67}{}%
+\contentsline {subsection}{\numberline {5.1}Data}{68}{}%
+\contentsline {subsection}{\numberline {5.2}Methodology}{68}{}%
+\contentsline {subsection}{\numberline {5.3}Results}{71}{}%
+\contentsline {subsection}{\numberline {5.4}Conclusions}{71}{}%
+\contentsline {section}{\numberline {6}Discussion}{72}{}%
+\contentsline {section}{\numberline {A}Title of Appendix A}{72}{}%
